@@ -190,7 +190,7 @@ function Projects() {
               </div>
 
               <div className="flex gap-4">
-                <a href="#" className="flex-1 flex items-center justify-center gap-2 px-4 py-3 bg-zinc-800 text-white rounded-xl font-semibold hover:bg-zinc-700 transition-colors border border-zinc-700">
+                <a href="https://github.com/benjamin14082002/Divina-Artesania-Django" className="flex-1 flex items-center justify-center gap-2 px-4 py-3 bg-zinc-800 text-white rounded-xl font-semibold hover:bg-zinc-700 transition-colors border border-zinc-700">
                   <Code className="w-4 h-4" /> Código
                 </a>
               </div>
