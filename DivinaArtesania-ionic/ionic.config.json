@@ -1,7 +1,0 @@
-{
-  "name": "AppDivinaArtesania",
-  "integrations": {
-    "capacitor": {}
-  },
-  "type": "angular-standalone"
-}
