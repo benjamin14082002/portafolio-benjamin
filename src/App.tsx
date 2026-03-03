@@ -46,7 +46,7 @@ function Hero() {
         >
           {/* Badge superior opcional para dar contexto rápido */}
           <span className="inline-block px-4 py-1.5 mb-6 text-xs font-mono tracking-widest text-orange-500 uppercase bg-orange-500/10 border border-orange-500/20 rounded-full">
-            Ingeniería Civil Informática • 4to Año
+            Ingeniería En Informática • 4to Año
           </span>
 
           <h1 className="text-6xl md:text-8xl font-black tracking-tighter mb-8 leading-[0.9]">
@@ -103,7 +103,7 @@ function About() {
           </h2>
           <div className="prose prose-invert prose-lg max-w-none text-zinc-300 space-y-6">
             <p className="leading-relaxed">
-              Soy un desarrollador de software de <span className="text-white font-medium">Maipú</span>, cursando mi cuarto año de <span className="text-white">Ingeniería Civil Informática</span>. Mi enfoque combina la rigurosidad técnica de la ingeniería con una mentalidad orientada a la seguridad y la escalabilidad.
+              Soy un desarrollador de software de <span className="text-white font-medium">Maipú</span>, cursando mi cuarto año de <span className="text-white">Ingeniería En Informática</span>. Mi enfoque combina la rigurosidad técnica de la ingeniería con una mentalidad orientada a la seguridad y la escalabilidad.
             </p>
             <p className="leading-relaxed">
               Mi mayor proyecto hasta la fecha es <span className="text-purple-400 font-semibold">Divina Artesanía</span>, un ecosistema full-stack donde diseñé tanto un backend robusto en Django como una experiencia móvil ágil. Este proyecto refleja mi capacidad para gestionar ciclos de desarrollo completos y conectar arquitecturas complejas de forma eficiente.
@@ -200,7 +200,7 @@ function Enfoque() {
     },
     {
       title: "Lógica de Ingeniería",
-      desc: "Aplicando los fundamentos de mi formación en Ingeniería Civil Informática para resolver problemas complejos con algoritmos eficientes y código limpio.",
+      desc: "Aplicando los fundamentos de mi formación en Ingeniería En Informática para resolver problemas complejos con algoritmos eficientes y código limpio.",
       icon: <Code className="text-purple-500" />,
       tag: "Java / Python / Algoritmos"
     }
@@ -355,7 +355,7 @@ function Projects() {
 function Experience() {
   const items = [
     {
-      title: "Ingeniería Civil Informática",
+      title: "Ingeniería En Informática",
       company: "4to Año - En curso",
       period: "2023 - Presente",
       desc: "Formación sólida en algoritmos, estructuras de datos y gestión de proyectos de software."
