@@ -425,6 +425,7 @@ export default function App() {
         <About />
         <TechStack />
         <Projects />
+        <Experience />
         <Contact />
       </main>
       <Footer />
