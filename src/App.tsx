@@ -174,22 +174,63 @@ function TechStack() {
 }
 
 function Enfoque() {
-  const enfoques = [
-    { title: "Desarrollo Seguro", desc: "Aplicando principios de ciberseguridad desde la concepción del código.", icon: <Layers className="text-purple-500" /> },
-    { title: "Escalabilidad", desc: "Diseñando arquitecturas robustas capaces de crecer con el negocio.", icon: <Server className="text-orange-500" /> },
-    { title: "UX/UI", desc: "Creando interfaces intuitivas que facilitan la interacción del usuario.", icon: <Smartphone className="text-purple-500" /> }
+  const pilares = [
+    {
+      title: "Auditoría y Seguridad",
+      desc: "Con conocimientos en Kali Linux y Pentesting, priorizo el desarrollo de software seguro para mitigar vulnerabilidades desde la arquitectura inicial.",
+      icon: <Layers className="text-purple-500" />,
+      tag: "Kali Linux / Pentesting"
+    },
+    {
+      title: "Arquitecturas Escalables",
+      desc: "Especializado en conectar backends robustos en Django con frontends dinámicos, asegurando sistemas que soporten el crecimiento de datos y usuarios.",
+      icon: <Server className="text-orange-500" />,
+      tag: "Django / PostgreSQL"
+    },
+    {
+      title: "Lógica de Ingeniería",
+      desc: "Aplicando los fundamentos de mi formación en Ingeniería Civil Informática para resolver problemas complejos con algoritmos eficientes y código limpio.",
+      icon: <Code className="text-purple-500" />,
+      tag: "Java / Python / Algoritmos"
+    }
   ];
 
   return (
-    <section className="py-20 px-6">
-      <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
-        {enfoques.map((e, i) => (
-          <div key={i} className="p-6 bg-zinc-900/20 border border-white/5 rounded-2xl">
-            <div className="mb-4">{e.icon}</div>
-            <h3 className="text-lg font-bold text-white mb-2">{e.title}</h3>
-            <p className="text-sm text-zinc-400">{e.desc}</p>
-          </div>
-        ))}
+    <section className="py-24 px-6 bg-black/20">
+      <div className="max-w-6xl mx-auto">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="text-center mb-16"
+        >
+          <h2 className="text-3xl font-bold text-white mb-4">Filosofía de Desarrollo</h2>
+          <div className="h-1 w-20 bg-gradient-to-r from-purple-500 to-orange-500 mx-auto rounded-full"></div>
+        </motion.div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {pilares.map((p, i) => (
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ delay: i * 0.1 }}
+              viewport={{ once: true }}
+              className="p-8 bg-zinc-900/40 border border-white/5 rounded-3xl hover:border-purple-500/30 transition-all group relative overflow-hidden"
+            >
+              <div className="mb-6 p-3 bg-zinc-800/50 w-fit rounded-2xl group-hover:scale-110 transition-transform">
+                {p.icon}
+              </div>
+              <h3 className="text-xl font-bold text-white mb-3">{p.title}</h3>
+              <p className="text-sm text-zinc-400 leading-relaxed mb-6">
+                {p.desc}
+              </p>
+              <div className="text-[10px] font-mono text-purple-400 uppercase tracking-widest border border-purple-500/20 w-fit px-3 py-1 rounded-full bg-purple-500/5">
+                {p.tag}
+              </div>
+            </motion.div>
+          ))}
+        </div>
       </div>
     </section>
   );
