@@ -92,13 +92,13 @@ function About() {
           </h2>
           <div className="prose prose-invert prose-lg max-w-none text-zinc-300 space-y-6">
             <p className="leading-relaxed">
-              Soy un desarrollador de software de <span className="text-white font-medium">Maipú</span> enfocado en transformar ideas en soluciones técnicas sólidas. Mi prioridad es construir arquitecturas limpias y escalables, con especial atención al detalle en cada línea de código.
+              Soy un desarrollador de software de <span className="text-white font-medium">Maipú</span>, cursando mi cuarto año de <span className="text-white">Ingeniería Civil Informática</span>. Mi enfoque combina la rigurosidad técnica de la ingeniería con una mentalidad orientada a la seguridad y la escalabilidad.
             </p>
             <p className="leading-relaxed">
-              Recientemente he centrado mi energía en el desarrollo de <span className="text-purple-400 font-semibold">Divina Artesanía</span>, un ecosistema full-stack donde logré conectar un backend robusto en Django con una interfaz moderna y eficiente.
+              Mi mayor proyecto hasta la fecha es <span className="text-purple-400 font-semibold">Divina Artesanía</span>, un ecosistema full-stack donde diseñé tanto un backend robusto en Django como una experiencia móvil ágil. Este proyecto refleja mi capacidad para gestionar ciclos de desarrollo completos y conectar arquitecturas complejas de forma eficiente.
             </p>
             <p className="leading-relaxed">
-              Me apasiona el desafío de resolver problemas complejos y crear herramientas que no solo funcionen, sino que sean intuitivas y aporten valor real a los usuarios finales.
+              Más allá del código, me apasiona la <span className="text-orange-400 font-semibold">Ciberseguridad</span>. Utilizo herramientas como Kali Linux para entender las vulnerabilidades desde la raíz, asegurando que cada solución que construyo no solo funcione perfectamente, sino que sea resistente y confiable.
             </p>
           </div>
         </motion.div>
@@ -106,7 +106,6 @@ function About() {
     </section>
   );
 }
-
 function TechStack() {
   const skills = [
     {
@@ -454,8 +453,8 @@ export default function App() {
         <Hero />
         <About />
         <TechStack />
-        <Projects />
         <Enfoque />
+        <Projects />
         <Experience />
         <Contact />
       </main>
