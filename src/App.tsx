@@ -174,103 +174,6 @@ function TechStack() {
   );
 }
 
-function Projects() {
-  return (
-    <section id="proyectos" className="py-32 px-6 relative">
-      <div className="max-w-6xl mx-auto">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.5 }}
-          className="mb-20 text-center"
-        >
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">Proyectos Destacados</h2>
-          <p className="text-xl text-zinc-400">El ecosistema <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-orange-400 font-bold">Divina Artesanía</span></p>
-        </motion.div>
-
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: "-50px" }}
-            transition={{ duration: 0.7, delay: 0.1, ease: "easeOut" }}
-            className="group relative bg-zinc-900/80 backdrop-blur-sm rounded-3xl overflow-hidden border border-zinc-800 hover:border-purple-500/50 transition-all duration-500 hover:shadow-2xl hover:shadow-purple-500/10 flex flex-col"
-          >
-            <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-
-            <div className="h-64 bg-zinc-800 relative overflow-hidden">
-              <img src="https://picsum.photos/seed/django-web/800/600?blur=2" alt="Plataforma Web Django" className="w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-all group-hover:scale-105 duration-700" referrerPolicy="no-referrer" />
-              <div className="absolute top-4 right-4 bg-purple-600/90 backdrop-blur-md text-white text-xs font-bold px-4 py-2 rounded-full flex items-center gap-2 shadow-lg">
-                <Server className="w-3.5 h-3.5" /> Web/Django
-              </div>
-            </div>
-
-            <div className="p-8 relative z-10 flex-1 flex flex-col">
-              <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-purple-400 transition-colors">
-                Plataforma Web
-              </h3>
-              <p className="text-zinc-400 mb-8 leading-relaxed flex-1">
-                Backend robusto y catálogo principal de Divina Artesanía. Desarrollado en Django para gestionar inventarios, usuarios y transacciones de forma segura y eficiente.
-              </p>
-
-              <div className="flex flex-wrap gap-2 mb-8">
-                <span className="px-3 py-1.5 bg-purple-500/10 text-purple-400 rounded-full text-xs font-semibold border border-purple-500/20">Django</span>
-                <span className="px-3 py-1.5 bg-blue-500/10 text-blue-400 rounded-full text-xs font-semibold border border-blue-500/20">Python</span>
-                <span className="px-3 py-1.5 bg-zinc-800 text-zinc-300 rounded-full text-xs font-semibold border border-zinc-700">PostgreSQL</span>
-              </div>
-
-              <div className="flex gap-4">
-                <a href="https://github.com/benjamin14082002/Divina-Artesania-Django" target="_blank" rel="noopener noreferrer" className="flex-1 flex items-center justify-center gap-2 px-4 py-3 bg-zinc-800 text-white rounded-xl font-semibold hover:bg-zinc-700 transition-colors border border-zinc-700">
-                  <Code className="w-4 h-4" /> Código
-                </a>
-              </div>
-            </div>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: "-50px" }}
-            transition={{ duration: 0.7, delay: 0.3, ease: "easeOut" }}
-            className="group relative bg-zinc-900/80 backdrop-blur-sm rounded-3xl overflow-hidden border border-zinc-800 hover:border-orange-500/50 transition-all duration-500 hover:shadow-2xl hover:shadow-orange-500/10 flex flex-col"
-          >
-            <div className="absolute inset-0 bg-gradient-to-br from-orange-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-
-            <div className="h-64 bg-zinc-800 relative overflow-hidden">
-              <img src="https://picsum.photos/seed/ionic-app/800/600?blur=2" alt="Aplicación Móvil Ionic" className="w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-all group-hover:scale-105 duration-700" referrerPolicy="no-referrer" />
-              <div className="absolute top-4 right-4 bg-orange-600/90 backdrop-blur-md text-white text-xs font-bold px-4 py-2 rounded-full flex items-center gap-2 shadow-lg">
-                <Smartphone className="w-3.5 h-3.5" /> App/Ionic
-              </div>
-            </div>
-
-            <div className="p-8 relative z-10 flex-1 flex flex-col">
-              <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-orange-400 transition-colors">
-                Aplicación Móvil
-              </h3>
-              <p className="text-zinc-400 mb-8 leading-relaxed flex-1">
-                Extensión móvil para clientes finales. Permite explorar el catálogo completo de productos y realizar pedidos directamente desde dispositivos Android e iOS.
-              </p>
-
-              <div className="flex flex-wrap gap-2 mb-8">
-                <span className="px-3 py-1.5 bg-orange-500/10 text-orange-400 rounded-full text-xs font-semibold border border-orange-500/20">Ionic</span>
-                <span className="px-3 py-1.5 bg-blue-500/10 text-blue-400 rounded-full text-xs font-semibold border border-blue-500/20">TypeScript</span>
-                <span className="px-3 py-1.5 bg-blue-600/10 text-blue-500 rounded-full text-xs font-semibold border border-blue-600/20">React</span>
-              </div>
-
-              <div className="flex gap-4">
-                <a href="https://github.com/benjamin14082002/Divina-Artesania-Django" className="flex-1 flex items-center justify-center gap-2 px-4 py-3 bg-zinc-800 text-white rounded-xl font-semibold hover:bg-zinc-700 transition-colors border border-zinc-700">
-                  <Code className="w-4 h-4" /> Código
-                </a>
-              </div>
-            </div>
-          </motion.div>
-        </div>
-      </div>
-    </section>
-  );
-}
-
 function Enfoque() {
   const enfoques = [
     { title: "Desarrollo Seguro", desc: "Aplicando principios de ciberseguridad desde la concepción del código.", icon: <Layers className="text-purple-500" /> },
@@ -292,6 +195,111 @@ function Enfoque() {
     </section>
   );
 }
+
+function Projects() {
+  return (
+    <section id="proyectos" className="py-32 px-6 relative">
+      <div className="max-w-6xl mx-auto">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.5 }}
+          className="mb-20 text-center"
+        >
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">Proyectos Destacados</h2>
+          <p className="text-xl text-zinc-400">
+            El ecosistema full-stack <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-orange-400 font-bold">Divina Artesanía</span>
+          </p>
+        </motion.div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+
+          {/* PILLAR 1: BACKEND & PANEL ADMINISTRATIVO */}
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.7, delay: 0.1, ease: "easeOut" }}
+            className="group relative bg-zinc-900/80 backdrop-blur-sm rounded-3xl overflow-hidden border border-zinc-800 hover:border-purple-500/50 transition-all duration-500 hover:shadow-2xl hover:shadow-purple-500/10 flex flex-col"
+          >
+            <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+
+            <div className="h-64 bg-zinc-800 relative overflow-hidden">
+              <img src="https://picsum.photos/seed/backend-dev/800/600" alt="Backend Django" className="w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-all group-hover:scale-105 duration-700" />
+              <div className="absolute top-4 right-4 bg-purple-600/90 backdrop-blur-md text-white text-xs font-bold px-4 py-2 rounded-full flex items-center gap-2 shadow-lg">
+                <Server className="w-3.5 h-3.5" /> Núcleo & API
+              </div>
+            </div>
+
+            <div className="p-8 relative z-10 flex-1 flex flex-col">
+              <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-purple-400 transition-colors">
+                Plataforma Web & Backend
+              </h3>
+              <p className="text-zinc-400 mb-8 leading-relaxed flex-1">
+                Arquitectura central del ecosistema. Desarrollé un backend robusto en <span className="text-white">Django</span> para la gestión centralizada de inventarios, usuarios y lógica de negocio. Incluye un panel administrativo para el control total de operaciones y una base de datos en <span className="text-white">PostgreSQL</span> optimizada para la consistencia de datos.
+              </p>
+
+              <div className="flex flex-wrap gap-2 mb-8">
+                <span className="px-3 py-1.5 bg-purple-500/10 text-purple-400 rounded-full text-xs font-semibold border border-purple-500/20">Django</span>
+                <span className="px-3 py-1.5 bg-blue-500/10 text-blue-400 rounded-full text-xs font-semibold border border-blue-500/20">Python</span>
+                <span className="px-3 py-1.5 bg-zinc-800 text-zinc-300 rounded-full text-xs font-semibold border border-zinc-700">PostgreSQL</span>
+              </div>
+
+              <div className="flex gap-4">
+                <a href="https://github.com/benjamin14082002/Divina-Artesania-Django" target="_blank" rel="noopener noreferrer" className="flex-1 flex items-center justify-center gap-2 px-4 py-3 bg-zinc-800 text-white rounded-xl font-semibold hover:bg-zinc-700 transition-colors border border-zinc-700">
+                  <Code className="w-4 h-4" /> Ver Repositorio
+                </a>
+              </div>
+            </div>
+          </motion.div>
+
+          {/* PILLAR 2: APLICACIÓN MÓVIL HÍBRIDA */}
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.7, delay: 0.3, ease: "easeOut" }}
+            className="group relative bg-zinc-900/80 backdrop-blur-sm rounded-3xl overflow-hidden border border-zinc-800 hover:border-orange-500/50 transition-all duration-500 hover:shadow-2xl hover:shadow-orange-500/10 flex flex-col"
+          >
+            <div className="absolute inset-0 bg-gradient-to-br from-orange-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+
+            <div className="h-64 bg-zinc-800 relative overflow-hidden">
+              <img src="https://picsum.photos/seed/mobile-app/800/600" alt="Ionic App" className="w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-all group-hover:scale-105 duration-700" />
+              <div className="absolute top-4 right-4 bg-orange-600/90 backdrop-blur-md text-white text-xs font-bold px-4 py-2 rounded-full flex items-center gap-2 shadow-lg">
+                <Smartphone className="w-3.5 h-3.5" /> Frontend Móvil
+              </div>
+            </div>
+
+            <div className="p-8 relative z-10 flex-1 flex flex-col">
+              <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-orange-400 transition-colors">
+                Aplicación Móvil Clientes
+              </h3>
+              <p className="text-zinc-400 mb-8 leading-relaxed flex-1">
+                Extensión móvil para la interacción directa con el consumidor final. Construida con <span className="text-white">Ionic y React</span>, permite la navegación fluida por el catálogo de productos y la realización de pedidos. Se comunica de forma eficiente con la API de Django para mantener la sincronización de stock y estados de compra.
+              </p>
+
+              <div className="flex flex-wrap gap-2 mb-8">
+                <span className="px-3 py-1.5 bg-orange-500/10 text-orange-400 rounded-full text-xs font-semibold border border-orange-500/20">Ionic</span>
+                <span className="px-3 py-1.5 bg-blue-600/10 text-blue-500 rounded-full text-xs font-semibold border border-blue-600/20">React</span>
+                <span className="px-3 py-1.5 bg-blue-400/10 text-blue-400 rounded-full text-xs font-semibold border border-blue-400/20">TypeScript</span>
+              </div>
+
+              <div className="flex gap-4">
+                <button className="flex-1 flex items-center justify-center gap-2 px-4 py-3 bg-zinc-800 text-zinc-500 rounded-xl font-semibold cursor-not-allowed border border-zinc-700">
+                  <ExternalLink className="w-4 h-4" /> Demo Móvil
+                </button>
+              </div>
+            </div>
+          </motion.div>
+
+        </div>
+      </div>
+    </section>
+  );
+}
+
+
 
 function Experience() {
   const items = [
