@@ -271,6 +271,35 @@ function Projects() {
   );
 }
 
+function Experience() {
+  const items = [
+    { title: "Ingeniería Civil Informática", company: "3er Año", period: "En curso" },
+    { title: "Curso Business Intelligence", company: "Certificación de Verano", period: "2026" },
+    { title: "Proyecto Divina Artesanía", company: "Full-Stack Developer", period: "2025 - Actualidad" },
+  ];
+
+  return (
+    <section className="py-20 px-6 bg-zinc-900/20">
+      <div className="max-w-4xl mx-auto">
+        <h2 className="text-2xl font-bold mb-10 flex items-center gap-3">
+          <Layers className="text-orange-500" /> Trayectoria y Educación
+        </h2>
+        <div className="space-y-6">
+          {items.map((item, i) => (
+            <div key={i} className="flex justify-between items-center p-4 border-l-2 border-purple-500 bg-white/5 rounded-r-xl">
+              <div>
+                <h3 className="font-bold text-white">{item.title}</h3>
+                <p className="text-sm text-zinc-400">{item.company}</p>
+              </div>
+              <span className="text-xs font-mono text-purple-400">{item.period}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function Contact() {
   const formAction = "https://formspree.io/f/mjgedqgq";
 
