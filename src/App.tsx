@@ -271,11 +271,33 @@ function Projects() {
   );
 }
 
+function Enfoque() {
+  const enfoques = [
+    { title: "Desarrollo Seguro", desc: "Aplicando principios de ciberseguridad desde la concepción del código.", icon: <Layers className="text-purple-500" /> },
+    { title: "Escalabilidad", desc: "Diseñando arquitecturas robustas capaces de crecer con el negocio.", icon: <Server className="text-orange-500" /> },
+    { title: "UX/UI", desc: "Creando interfaces intuitivas que facilitan la interacción del usuario.", icon: <Smartphone className="text-purple-500" /> }
+  ];
+
+  return (
+    <section className="py-20 px-6">
+      <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+        {enfoques.map((e, i) => (
+          <div key={i} className="p-6 bg-zinc-900/20 border border-white/5 rounded-2xl">
+            <div className="mb-4">{e.icon}</div>
+            <h3 className="text-lg font-bold text-white mb-2">{e.title}</h3>
+            <p className="text-sm text-zinc-400">{e.desc}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+}
+
 function Experience() {
   const items = [
-    { title: "Ingeniería Civil Informática", company: "3er Año", period: "En curso" },
+    { title: "Ingeniería Civil Informática", company: "4to Año", period: "En curso" },
     { title: "Curso Business Intelligence", company: "Certificación de Verano", period: "2026" },
-    { title: "Proyecto Divina Artesanía", company: "Full-Stack Developer", period: "2025 - Actualidad" },
+    { title: "Proyecto Divina Artesanía", company: "Full-Stack Developer", period: "2026 - Actualidad" },
   ];
 
   return (
@@ -425,6 +447,7 @@ export default function App() {
         <About />
         <TechStack />
         <Projects />
+        <Enfoque />
         <Experience />
         <Contact />
       </main>
