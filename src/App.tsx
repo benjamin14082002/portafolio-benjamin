@@ -1,5 +1,5 @@
-import { motion } from 'motion/react';
-import { Github, Linkedin, Mail, ExternalLink, Code, Smartphone, Globe, Server } from 'lucide-react';
+import { motion } from 'framer-motion'; // Ajustado de 'motion/react' a 'framer-motion' si usas la v10+
+import { Github, Linkedin, Mail, ExternalLink, Code, Smartphone, Globe, Server, Database, Cpu, Layout, Layers } from 'lucide-react';
 
 function Navbar() {
   return (
@@ -16,6 +16,7 @@ function Navbar() {
 
         <div className="hidden md:flex gap-8 text-sm font-medium text-gray-300">
           <a href="#sobre-mi" className="hover:text-white transition-colors">Sobre Mí</a>
+          <a href="#tecnologias" className="hover:text-white transition-colors">Tecnologías</a>
           <a href="#proyectos" className="hover:text-white transition-colors">Proyectos</a>
           <a href="#contacto" className="hover:text-white transition-colors">Contacto</a>
         </div>
@@ -74,6 +75,7 @@ function Hero() {
     </section>
   );
 }
+
 function About() {
   return (
     <section id="sobre-mi" className="py-24 px-6 bg-zinc-900/30 border-y border-white/5">
@@ -100,6 +102,51 @@ function About() {
             </p>
           </div>
         </motion.div>
+      </div>
+    </section>
+  );
+}
+
+function TechStack() {
+  const skills = [
+    { name: "Frontend", techs: ["React", "TypeScript", "Tailwind CSS", "Ionic"], icon: <Layout className="w-5 h-5" color="#a855f7" /> },
+    { name: "Backend", techs: ["Python", "Django", "Node.js", "Express"], icon: <Server className="w-5 h-5" color="#f97316" /> },
+    { name: "Base de Datos", techs: ["PostgreSQL", "MySQL", "Firebase"], icon: <Database className="w-5 h-5" color="#a855f7" /> },
+    { name: "Herramientas", techs: ["Git", "Docker", "Vercel", "Linux"], icon: <Cpu className="w-5 h-5" color="#f97316" /> }
+  ];
+
+  return (
+    <section id="tecnologias" className="py-24 px-6">
+      <div className="max-w-6xl mx-auto">
+        <div className="flex flex-col items-center mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Stack Tecnológico</h2>
+          <div className="h-1 w-20 bg-gradient-to-r from-purple-500 to-orange-500 rounded-full"></div>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {skills.map((skill, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: index * 0.1 }}
+              viewport={{ once: true }}
+              className="p-6 bg-zinc-900/50 border border-zinc-800 rounded-2xl hover:border-purple-500/30 transition-all group"
+            >
+              <div className="flex items-center gap-3 mb-4">
+                {skill.icon}
+                <h3 className="text-lg font-bold text-white">{skill.name}</h3>
+              </div>
+              <div className="flex flex-wrap gap-2">
+                {skill.techs.map((t) => (
+                  <span key={t} className="text-xs px-2 py-1 bg-zinc-800 text-zinc-400 rounded-md border border-zinc-700 group-hover:border-zinc-600 transition-colors">
+                    {t}
+                  </span>
+                ))}
+              </div>
+            </motion.div>
+          ))}
+        </div>
       </div>
     </section>
   );
@@ -207,7 +254,6 @@ function Contact() {
 
   return (
     <section id="contacto" className="py-32 px-6 bg-zinc-900/30 border-t border-white/5 relative overflow-hidden">
-
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-purple-600/10 rounded-full blur-[120px] -z-10" />
 
       <div className="max-w-5xl mx-auto">
@@ -230,7 +276,6 @@ function Contact() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="md:col-span-3"
           >
-
             <form
               action={formAction}
               method="POST"
@@ -327,6 +372,7 @@ export default function App() {
       <main>
         <Hero />
         <About />
+        <TechStack />
         <Projects />
         <Contact />
       </main>
