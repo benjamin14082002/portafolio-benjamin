@@ -343,26 +343,65 @@ function Projects() {
 
 function Experience() {
   const items = [
-    { title: "Ingeniería Civil Informática", company: "4to Año", period: "En curso" },
-    { title: "Curso Business Intelligence", company: "Certificación de Verano", period: "2026" },
-    { title: "Proyecto Divina Artesanía", company: "Full-Stack Developer", period: "2026 - Actualidad" },
+    {
+      title: "Ingeniería Civil Informática",
+      company: "4to Año - En curso",
+      period: "2023 - Presente",
+      desc: "Formación sólida en algoritmos, estructuras de datos y gestión de proyectos de software."
+    },
+    {
+      title: "Proyecto Divina Artesanía",
+      company: "Full-Stack Developer",
+      period: "2025 - Actualidad",
+      desc: "Liderazgo en el desarrollo de un ecosistema digital completo usando Django, React e Ionic."
+    }
   ];
 
   return (
-    <section className="py-20 px-6 bg-zinc-900/20">
+    <section id="trayectoria" className="py-24 px-6 relative">
       <div className="max-w-4xl mx-auto">
-        <h2 className="text-2xl font-bold mb-10 flex items-center gap-3">
-          <Layers className="text-orange-500" /> Trayectoria y Educación
-        </h2>
-        <div className="space-y-6">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="mb-16 flex items-center gap-4"
+        >
+          <div className="p-3 bg-orange-500/10 rounded-2xl">
+            <Layers className="text-orange-500 w-6 h-6" />
+          </div>
+          <h2 className="text-3xl font-bold text-white tracking-tight">Trayectoria y Educación</h2>
+        </motion.div>
+
+        <div className="relative border-l-2 border-zinc-800 ml-4 md:ml-6 space-y-12">
           {items.map((item, i) => (
-            <div key={i} className="flex justify-between items-center p-4 border-l-2 border-purple-500 bg-white/5 rounded-r-xl">
-              <div>
-                <h3 className="font-bold text-white">{item.title}</h3>
-                <p className="text-sm text-zinc-400">{item.company}</p>
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ delay: i * 0.2 }}
+              viewport={{ once: true }}
+              className="relative pl-8 group"
+            >
+              {/* Círculo de la línea de tiempo */}
+              <div className="absolute -left-[9px] top-1 w-4 h-4 bg-zinc-900 border-2 border-orange-500 rounded-full group-hover:scale-125 group-hover:bg-orange-500 transition-all duration-300" />
+
+              <div className="bg-zinc-900/40 border border-white/5 p-6 rounded-2xl group-hover:border-orange-500/30 transition-all">
+                <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-2 mb-4">
+                  <div>
+                    <h3 className="text-xl font-bold text-white group-hover:text-orange-400 transition-colors">
+                      {item.title}
+                    </h3>
+                    <p className="text-purple-400 font-medium text-sm">{item.company}</p>
+                  </div>
+                  <span className="text-xs font-mono px-3 py-1 bg-zinc-800 text-zinc-400 rounded-full border border-zinc-700 w-fit">
+                    {item.period}
+                  </span>
+                </div>
+                <p className="text-zinc-400 text-sm leading-relaxed">
+                  {item.desc}
+                </p>
               </div>
-              <span className="text-xs font-mono text-purple-400">{item.period}</span>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
